@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 import java.lang.Math;
-public class Lab5 {
+public class hangman {
     public static void main(String [] args) {
         String [] hang = new String[9];
         hang[0] = "__________\n" +
@@ -81,7 +81,7 @@ public class Lab5 {
         Scanner scan = new Scanner(System.in);
 
         FileIO reader = new FileIO();
-        String[] contents = reader.load("/Users/phelomusic/Downloads/dictionary.txt");
+        String[] contents = reader.load("dictionary.txt");
         String secretWord = contents[(int)Math.floor(Math.random() * Math.floor(contents.length))];
         char[] ar = secretWord.toCharArray();
         String dash = secretWord.replaceAll(".", "_");
